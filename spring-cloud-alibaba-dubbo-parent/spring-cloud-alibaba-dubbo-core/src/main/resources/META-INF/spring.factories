@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.robintime.alibaba.dubbo.core.SpringCloudAlibabaDubboAutoConfiguration

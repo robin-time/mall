@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.robintime</groupId>
+        <artifactId>spring-cloud-alibaba-dubbo-consumer</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>spring-cloud-alibaba-dubbo-consumer-service</artifactId>
+    <url>http://www.robintime.com</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.robintime</groupId>
+            <artifactId>spring-cloud-alibaba-dubbo-starter</artifactId>
+            <exclusions>
+                <!--排除掉dubbo配置，就变成只使用restful http模式的服务间通信；否则就是rpc通信-->
+                <!--<exclusion>-->
+                    <!--<groupId>com.robintime</groupId>-->
+                    <!--<artifactId>spring-cloud-alibaba-dubbo-core</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>com.alibaba.boot</groupId>-->
+                    <!--<artifactId>dubbo-spring-boot-starter</artifactId>-->
+                <!--</exclusion>-->
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.robintime</groupId>
+            <artifactId>spring-cloud-alibaba-dubbo-provider-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
